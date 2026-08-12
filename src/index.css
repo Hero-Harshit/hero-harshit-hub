@@ -893,28 +893,9 @@ body,
     .carousel-viewport {
         --card-w: 200px;
         --card-gap: 16px;
-    }
-
-    /* Softer edge fade — lets peeking cards show more clearly */
-    .carousel-viewport {
-        mask-image: linear-gradient(
-            to right,
-            transparent 0%,
-            rgba(0,0,0,0.4) 6%,
-            black 16%,
-            black 84%,
-            rgba(0,0,0,0.4) 94%,
-            transparent 100%
-        );
-        -webkit-mask-image: linear-gradient(
-            to right,
-            transparent 0%,
-            rgba(0,0,0,0.4) 6%,
-            black 16%,
-            black 84%,
-            rgba(0,0,0,0.4) 94%,
-            transparent 100%
-        );
+        /* Completely remove the edge-fade/shadow masks for mobile */
+        mask-image: none !important;
+        -webkit-mask-image: none !important;
     }
 
     .fluid-card .theme-preview {
