@@ -119,7 +119,17 @@ function App() {
       </nav>
 
       {currentPage === 'home' && (
-        <main style={{ marginTop: '7rem', padding: '2rem', textAlign: 'center' }}>
+        <main className="home-container" style={{ marginTop: '9rem' }}>
+          <div className="dev-card">
+            <span className="dev-badge">🚧 Under Development</span>
+            <h2>Coming Soon</h2>
+            <p>
+              This site is currently under development to bring you a premium, state-of-the-art interface experience.
+            </p>
+            <p style={{ fontWeight: '600', opacity: 1 }}>
+              Thank you for visiting!
+            </p>
+          </div>
         </main>
       )}
 

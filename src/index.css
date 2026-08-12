@@ -5,7 +5,7 @@
     --bg-color: #f8fafc;
     --text-color: #0f172a;
     --accent-color: #0284c7;
-    --nav-bg: rgba(248, 250, 252, 0.85);
+    --nav-bg: #f8fafc;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --logo-color: #000000;
     --dropdown-bg: rgba(255, 255, 255, 0.95);
@@ -18,7 +18,7 @@
     --bg-color: #f8fafc;
     --text-color: #0f172a;
     --accent-color: #0284c7;
-    --nav-bg: rgba(248, 250, 252, 0.85);
+    --nav-bg: #f8fafc;
     --logo-color: #000000;
     --dropdown-bg: rgba(255, 255, 255, 0.95);
     --border-color: rgba(15, 23, 42, 0.08);
@@ -29,7 +29,7 @@
     --bg-color: #0b0f19;
     --text-color: #f8fafc;
     --accent-color: #38bdf8;
-    --nav-bg: rgba(11, 15, 25, 0.85);
+    --nav-bg: #0b0f19;
     --logo-color: #ffffff;
     --dropdown-bg: rgba(17, 24, 39, 0.95);
     --border-color: rgba(255, 255, 255, 0.08);
@@ -40,7 +40,7 @@
     --bg-color: #000000;
     --text-color: #f8fafc;
     --accent-color: #ffffff;
-    --nav-bg: rgba(0, 0, 0, 0.85);
+    --nav-bg: #000000;
     --logo-color: #ffffff;
     --dropdown-bg: rgba(0, 0, 0, 0.98);
     --border-color: rgba(255, 255, 255, 0.15);
@@ -51,7 +51,7 @@
     --bg-color: #0d281e;
     --text-color: #d1fae5;
     --accent-color: #10b981;
-    --nav-bg: rgba(13, 40, 30, 0.85);
+    --nav-bg: #0d281e;
     --logo-color: #34d399;
     --dropdown-bg: rgba(15, 48, 36, 0.98);
     --border-color: rgba(16, 185, 129, 0.15);
@@ -62,7 +62,7 @@
     --bg-color: #0b1a30;
     --text-color: #e0f2fe;
     --accent-color: #38bdf8;
-    --nav-bg: rgba(11, 26, 48, 0.85);
+    --nav-bg: #0b1a30;
     --logo-color: #06b6d4;
     --dropdown-bg: rgba(15, 36, 64, 0.98);
     --border-color: rgba(56, 189, 248, 0.15);
@@ -73,7 +73,7 @@
     --bg-color: #2b0f0b;
     --text-color: #ffedd5;
     --accent-color: #f97316;
-    --nav-bg: rgba(43, 15, 11, 0.85);
+    --nav-bg: #2b0f0b;
     --logo-color: #f43f5e;
     --dropdown-bg: rgba(56, 20, 15, 0.98);
     --border-color: rgba(249, 115, 22, 0.15);
@@ -84,7 +84,7 @@
     --bg-color: #fdf2f8;
     --text-color: #9d174d;
     --accent-color: #db2777;
-    --nav-bg: rgba(253, 242, 248, 0.85);
+    --nav-bg: #fdf2f8;
     --logo-color: #ec4899;
     --dropdown-bg: rgba(255, 255, 255, 0.98);
     --border-color: rgba(219, 39, 119, 0.1);
@@ -95,7 +95,7 @@
     --bg-color: #140d24;
     --text-color: #f3e8ff;
     --accent-color: #a855f7;
-    --nav-bg: rgba(20, 13, 36, 0.85);
+    --nav-bg: #140d24;
     --logo-color: #c084fc;
     --dropdown-bg: rgba(28, 19, 50, 0.98);
     --border-color: rgba(168, 85, 247, 0.15);
@@ -106,7 +106,7 @@
     --bg-color: #f0f9ff;
     --text-color: #0369a1;
     --accent-color: #0ea5e9;
-    --nav-bg: rgba(240, 249, 255, 0.85);
+    --nav-bg: #f0f9ff;
     --logo-color: #0284c7;
     --dropdown-bg: rgba(255, 255, 255, 0.98);
     --border-color: rgba(14, 165, 233, 0.1);
@@ -117,7 +117,7 @@
     --bg-color: #111111;
     --text-color: #fecdd3;
     --accent-color: #ea580c;
-    --nav-bg: rgba(17, 17, 17, 0.85);
+    --nav-bg: #111111;
     --logo-color: #dc2626;
     --dropdown-bg: rgba(25, 25, 25, 0.98);
     --border-color: rgba(220, 38, 38, 0.15);
@@ -128,7 +128,7 @@
     --bg-color: #fbf6ef;
     --text-color: #451a03;
     --accent-color: #c2410c;
-    --nav-bg: rgba(251, 246, 239, 0.85);
+    --nav-bg: #fbf6ef;
     --logo-color: #ea580c;
     --dropdown-bg: rgba(255, 255, 255, 0.98);
     --border-color: rgba(194, 65, 12, 0.1);
@@ -139,7 +139,7 @@
     --bg-color: #0c0a05;
     --text-color: #fef3c7;
     --accent-color: #fbbf24;
-    --nav-bg: rgba(12, 10, 5, 0.85);
+    --nav-bg: #0c0a05;
     --logo-color: #fbbf24;
     --dropdown-bg: rgba(20, 16, 8, 0.98);
     --border-color: rgba(251, 191, 36, 0.15);
@@ -150,7 +150,7 @@
     --bg-color: #1e293b;
     --text-color: #f1f5f9;
     --accent-color: #94a3b8;
-    --nav-bg: rgba(30, 41, 59, 0.85);
+    --nav-bg: #1e293b;
     --logo-color: #cbd5e1;
     --dropdown-bg: rgba(38, 52, 75, 0.98);
     --border-color: rgba(148, 163, 184, 0.15);
@@ -198,8 +198,6 @@ body,
     align-items: center;
     padding: 1.5rem 2rem;
     background: var(--nav-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-color);
     z-index: 1000;
     transition: background-color 0.3s, border-bottom 0.3s;
@@ -304,6 +302,52 @@ body,
 .nav-links button:hover {
     color: var(--accent-color);
     padding-left: 5px;
+}
+
+/* Home Page Card Styles */
+.home-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.dev-card {
+    background: var(--card-bg);
+    border: 1.5px dashed var(--accent-color);
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.dev-badge {
+    background: rgba(var(--accent-color), 0.1);
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    padding: 0.35rem 1rem;
+    border-radius: 99px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.dev-card h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.dev-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.85;
 }
 
 /* Settings Page Styles */
