@@ -144,9 +144,6 @@ function App() {
               onMouseUp={onMouseUp}
               style={{ cursor: 'grab' }}
             >
-              <button className="carousel-arrow carousel-arrow-left" onClick={handlePrev} aria-label="Previous theme">
-                ‹
-              </button>
 
               <div className="carousel-viewport">
                 <div
@@ -190,9 +187,6 @@ function App() {
                 </div>
               </div>
 
-              <button className="carousel-arrow carousel-arrow-right" onClick={handleNext} aria-label="Next theme">
-                ›
-              </button>
             </div>
 
             {/* Dot indicators */}

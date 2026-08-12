@@ -499,45 +499,9 @@ body,
         0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Arrow navigation buttons */
+/* Arrow navigation buttons — hidden on desktop (navigation via scroll/drag/dots) */
 .carousel-arrow {
-    flex-shrink: 0;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 1.5px solid var(--border-color);
-    background: var(--card-bg);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    color: var(--text-color);
-    font-size: 1.5rem;
-    font-weight: 300;
-    line-height: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition:
-        background 0.2s,
-        transform 0.2s cubic-bezier(0.32, 0.72, 0, 1),
-        box-shadow 0.2s,
-        opacity 0.2s;
-    opacity: 0.7;
-    z-index: 20;
-    font-family: inherit;
-}
-
-.carousel-arrow:hover {
-    opacity: 1;
-    transform: scale(1.1);
-    background: var(--accent-color);
-    color: #ffffff;
-    border-color: var(--accent-color);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-}
-
-.carousel-arrow:active {
-    transform: scale(0.96);
+    display: none;
 }
 
 /* Dot indicators */
@@ -925,23 +889,45 @@ body,
 
 /* Responsive */
 @media (max-width: 600px) {
+    /* Wider cards so adjacent ones peek in from both sides */
     .carousel-viewport {
-        --card-w: 160px;
-        --card-gap: 14px;
+        --card-w: 200px;
+        --card-gap: 16px;
+    }
+
+    /* Softer edge fade — lets peeking cards show more clearly */
+    .carousel-viewport {
+        mask-image: linear-gradient(
+            to right,
+            transparent 0%,
+            rgba(0,0,0,0.4) 6%,
+            black 16%,
+            black 84%,
+            rgba(0,0,0,0.4) 94%,
+            transparent 100%
+        );
+        -webkit-mask-image: linear-gradient(
+            to right,
+            transparent 0%,
+            rgba(0,0,0,0.4) 6%,
+            black 16%,
+            black 84%,
+            rgba(0,0,0,0.4) 94%,
+            transparent 100%
+        );
     }
 
     .fluid-card .theme-preview {
-        height: 130px;
+        height: 155px;
     }
 
     .fluid-card--center .theme-preview {
-        height: 148px;
+        height: 175px;
     }
 
-    .carousel-arrow {
-        width: 34px;
-        height: 34px;
-        font-size: 1.2rem;
+    /* Adjacent cards are tappable (no arrows, so tapping them is the nav) */
+    .fluid-card--adjacent {
+        pointer-events: auto;
     }
 
     .fluid-card--near,
@@ -950,6 +936,6 @@ body,
     }
 
     .fluid-card .theme-name {
-        font-size: 0.78rem;
+        font-size: 0.82rem;
     }
 }
