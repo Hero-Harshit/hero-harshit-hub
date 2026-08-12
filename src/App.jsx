@@ -4,19 +4,19 @@ import { useState, useEffect, useRef } from 'react';
 const CLONE_COUNT = 5;
 
 const THEMES = [
-  { id: 'light',   name: 'Light',   heading: 'Light',   desc: 'Clean, crisp, and easy on the eyes.',    btnText: 'Explore', previewClass: 'light-preview'   },
-  { id: 'dark',    name: 'Dark',    heading: 'Dark',    desc: 'Deep, comfortable, and modern.',          btnText: 'Explore', previewClass: 'dark-preview'    },
-  { id: 'space',   name: 'Space',   heading: 'Space',   desc: 'Pure black, infinite, and contrasty.',    btnText: 'Explore', previewClass: 'space-preview'   },
-  { id: 'forest',  name: 'Forest',  heading: 'Forest',  desc: 'Calm, natural, and grounded.',            btnText: 'Explore', previewClass: 'forest-preview'  },
-  { id: 'ocean',   name: 'Ocean',   heading: 'Ocean',   desc: 'Deep, calm, and refreshing.',             btnText: 'Explore', previewClass: 'ocean-preview'   },
-  { id: 'fire',    name: 'Fire',    heading: 'Fire',    desc: 'Bold, warm, and full of energy.',         btnText: 'Explore', previewClass: 'fire-preview'    },
-  { id: 'sakura',  name: 'Rose',    heading: 'Rose',    desc: 'Soft, elegant, and playful.',             btnText: 'Explore', previewClass: 'sakura-preview'  },
-  { id: 'grape',   name: 'Grape',   heading: 'Grape',   desc: 'Mysterious, rich, and creative.',         btnText: 'Explore', previewClass: 'grape-preview'   },
-  { id: 'ice',     name: 'Ice',     heading: 'Ice',     desc: 'Cool, clean, and crystalline.',           btnText: 'Explore', previewClass: 'ice-preview'     },
-  { id: 'volcano', name: 'Volcano', heading: 'Volcano', desc: 'Intense, raw, and high contrast.',        btnText: 'Explore', previewClass: 'volcano-preview' },
-  { id: 'desert',  name: 'Desert',  heading: 'Desert',  desc: 'Warm, textured, and organic.',            btnText: 'Explore', previewClass: 'desert-preview'  },
-  { id: 'gold',    name: 'Gold',    heading: 'Gold',    desc: 'Luxury, refined, and prestigious.',       btnText: 'Explore', previewClass: 'gold-preview'    },
-  { id: 'moon',    name: 'Moon',    heading: 'Moon',    desc: 'Sleek, metallic, and reflective.',        btnText: 'Explore', previewClass: 'moon-preview'    },
+  { id: 'light', name: 'Light', heading: 'Light', desc: 'Clean, crisp, and easy on the eyes.', btnText: 'Explore', previewClass: 'light-preview' },
+  { id: 'dark', name: 'Dark', heading: 'Dark', desc: 'Deep, comfortable, and modern.', btnText: 'Explore', previewClass: 'dark-preview' },
+  { id: 'space', name: 'Space', heading: 'Space', desc: 'Pure black, infinite, and contrasty.', btnText: 'Explore', previewClass: 'space-preview' },
+  { id: 'forest', name: 'Forest', heading: 'Forest', desc: 'Calm, natural, and grounded.', btnText: 'Explore', previewClass: 'forest-preview' },
+  { id: 'ocean', name: 'Ocean', heading: 'Ocean', desc: 'Deep, calm, and refreshing.', btnText: 'Explore', previewClass: 'ocean-preview' },
+  { id: 'fire', name: 'Fire', heading: 'Fire', desc: 'Bold, warm, and full of energy.', btnText: 'Explore', previewClass: 'fire-preview' },
+  { id: 'sakura', name: 'Rose', heading: 'Rose', desc: 'Soft, elegant, and playful.', btnText: 'Explore', previewClass: 'sakura-preview' },
+  { id: 'grape', name: 'Grape', heading: 'Grape', desc: 'Mysterious, rich, and creative.', btnText: 'Explore', previewClass: 'grape-preview' },
+  { id: 'ice', name: 'Ice', heading: 'Ice', desc: 'Cool, clean, and crystalline.', btnText: 'Explore', previewClass: 'ice-preview' },
+  { id: 'volcano', name: 'Volcano', heading: 'Volcano', desc: 'Intense, raw, and high contrast.', btnText: 'Explore', previewClass: 'volcano-preview' },
+  { id: 'desert', name: 'Desert', heading: 'Desert', desc: 'Warm, textured, and organic.', btnText: 'Explore', previewClass: 'desert-preview' },
+  { id: 'gold', name: 'Gold', heading: 'Gold', desc: 'Luxury, refined, and prestigious.', btnText: 'Explore', previewClass: 'gold-preview' },
+  { id: 'moon', name: 'Moon', heading: 'Moon', desc: 'Sleek, metallic, and reflective.', btnText: 'Explore', previewClass: 'moon-preview' },
 ];
 
 const LEN = THEMES.length;
@@ -38,8 +38,8 @@ function App() {
   const focusedTheme = THEMES[focusedIndex];
 
   const carouselRef = useRef(null);
-  const dragStart   = useRef(null);
-  const lastWheel   = useRef(0);
+  const dragStart = useRef(null);
+  const lastWheel = useRef(0);
   const DRAG_THRESHOLD = 50;
 
   // Apply theme class to <body>/<html>
@@ -70,21 +70,21 @@ function App() {
     return () => el.removeEventListener('wheel', onWheel);
   }, [currentPage]);
 
-  const toggleMenu      = () => setIsMenuOpen(p => !p);
+  const toggleMenu = () => setIsMenuOpen(p => !p);
   const handleLinkClick = (page) => { setCurrentPage(page); setIsMenuOpen(false); };
-  const handlePrev      = () => setFocusedIndex(prev => Math.max(0, prev - 1));
-  const handleNext      = () => setFocusedIndex(prev => Math.min(LEN - 1, prev + 1));
+  const handlePrev = () => setFocusedIndex(prev => Math.max(0, prev - 1));
+  const handleNext = () => setFocusedIndex(prev => Math.min(LEN - 1, prev + 1));
 
   // Touch / mouse drag
   const onTouchStart = (e) => { dragStart.current = e.touches[0].clientX; };
-  const onTouchEnd   = (e) => {
+  const onTouchEnd = (e) => {
     if (dragStart.current === null) return;
     const diff = dragStart.current - e.changedTouches[0].clientX;
     if (Math.abs(diff) > DRAG_THRESHOLD) diff > 0 ? handleNext() : handlePrev();
     dragStart.current = null;
   };
   const onMouseDown = (e) => { dragStart.current = e.clientX; };
-  const onMouseUp   = (e) => {
+  const onMouseUp = (e) => {
     if (dragStart.current === null) return;
     const diff = dragStart.current - e.clientX;
     if (Math.abs(diff) > DRAG_THRESHOLD) diff > 0 ? handleNext() : handlePrev();
@@ -121,11 +121,12 @@ function App() {
       {currentPage === 'home' && (
         <main className="home-container" style={{ marginTop: '9rem' }}>
           <div className="dev-card">
-            <span className="dev-badge">🚧 Under Development</span>
-            <h2>Coming Soon</h2>
+            <span className="dev-badge">Under Development</span>
+            <h2>The website isn't ready yet.</h2>
             <p>
-              This site is currently under development to bring you a premium, state-of-the-art interface experience.
+              Which is unfortunate, because, I was really hoping you'd see the good stuff. I'm currently turning a collection of ideas, projects, experiments and questionable decisions into an actual website. Apparently, building a personal website takes longer when you keep adding things to it.
             </p>
+            <p>In the meantime, keep chanting "Har Har Harshit"</p>
             <p style={{ fontWeight: '600', opacity: 1 }}>
               Thank you for visiting!
             </p>
@@ -163,16 +164,16 @@ function App() {
                   }}
                 >
                   {THEMES.map((t, i) => {
-                    const offset     = i - focusedIndex;
-                    const isCenter   = offset === 0;
+                    const offset = i - focusedIndex;
+                    const isCenter = offset === 0;
                     const isAdjacent = Math.abs(offset) === 1;
-                    const isNear     = Math.abs(offset) === 2;
+                    const isNear = Math.abs(offset) === 2;
 
                     let cardClass = 'fluid-card';
-                    if (isCenter)        cardClass += ' fluid-card--center';
+                    if (isCenter) cardClass += ' fluid-card--center';
                     else if (isAdjacent) cardClass += ' fluid-card--adjacent';
-                    else if (isNear)     cardClass += ' fluid-card--near';
-                    else                 cardClass += ' fluid-card--far';
+                    else if (isNear) cardClass += ' fluid-card--near';
+                    else cardClass += ' fluid-card--far';
 
                     return (
                       <div
